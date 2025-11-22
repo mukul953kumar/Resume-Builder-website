@@ -1,0 +1,32 @@
+NETLIFY CUSTOM DOMAIN SETUP
+===========================
+
+STEP 1: Change Site Name (FREE)
+------------------------------
+1. Go to: https://app.netlify.com/sites/regal-zabaione-f4cd12/settings/general
+2. Click "Change site name"
+3. Enter new name: mukul-resume-builder
+4. Save changes
+
+NEW URL: https://mukul-resume-builder.netlify.app
+
+SUGGESTED NAMES:
+- mukul-resume-builder
+- professional-resume-maker  
+- resume-wizard-mukul
+- smart-resume-creator
+- cv-builder-pro
+
+STEP 2: Update Links
+-------------------
+After name change, share new URL:
+🏠 Landing: https://your-new-name.netlify.app
+⚡ Builder: https://your-new-name.netlify.app/app.html
+
+TEACHER KO YE BHEJNI HAI:
+========================
+"Sir, please check my Resume Builder project:
+🔗 https://mukul-resume-builder.netlify.app
+
+Features: 6 Templates, Real-time Preview, PDF Download
+Created by: Mukul Kumar"

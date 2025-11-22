@@ -1,0 +1,30 @@
+WEBSITE DEPLOYMENT INSTRUCTIONS
+================================
+
+Option 1: GitHub Pages (Recommended - FREE)
+------------------------------------------
+1. Create GitHub account (github.com)
+2. Create new repository named "resume-builder"
+3. Upload all files (landing.html, index.html, script-wizard.js, styles-wizard.css, etc.)
+4. Go to Settings > Pages
+5. Select "Deploy from a branch" > "main"
+6. Your website will be live at: https://yourusername.github.io/resume-builder/landing.html
+
+Option 2: Netlify (FREE)
+------------------------
+1. Go to netlify.com
+2. Drag and drop your project folder
+3. Get instant live link like: https://amazing-site-name.netlify.app
+
+Option 3: Vercel (FREE)
+-----------------------
+1. Go to vercel.com
+2. Import from GitHub or upload folder
+3. Get live link like: https://resume-builder-xyz.vercel.app
+
+DEMO LINKS TO SHARE:
+===================
+Landing Page: [your-domain]/landing.html
+Resume Builder: [your-domain]/index.html
+
+Teacher ko sirf ye link bhej dena - no installation needed!

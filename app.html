@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder</title>
+    <link rel="stylesheet" href="styles-wizard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-file-user"></i>
+                    <div class="logo-text">
+                        <h1>Resume Builder</h1>
+                        <p>Create your professional resume step by step</p>
+                    </div>
+                </div>
+                
+                <div class="header-buttons">
+                    <button id="previewBtn" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        Preview
+                    </button>
+                    <button id="downloadBtn" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Template</div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Personal</div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Summary</div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Experience</div>
+                </div>
+                <div class="step" data-step="5">
+                    <div class="step-number">5</div>
+                    <div class="step-label">Education</div>
+                </div>
+                <div class="step" data-step="6">
+                    <div class="step-number">6</div>
+                    <div class="step-label">Skills</div>
+                </div>
+                <div class="step" data-step="7">
+                    <div class="step-number">7</div>
+                    <div class="step-label">Finish</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <div class="wizard-layout">
+            <!-- Form Section -->
+            <div class="wizard-section">
+                <!-- Step 1: Template Selection -->
+                <div class="wizard-step active" id="step1">
+                    <div class="step-header">
+                        <h2><i class="fas fa-th-large"></i> Choose Your Template</h2>
+                        <p>Select a professional template that matches your style</p>
+                    </div>
+                    
+                    <div class="template-showcase">
+                        <div class="template-card active" data-template="modern">
+                            <div class="template-preview modern-preview">
+                                <div class="template-sidebar"></div>
+                                <div class="template-main">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                    <div class="template-line"></div>
+                                </div>
+                            </div>
+                            <div class="template-info">
+                                <h3>Modern Sidebar</h3>
+                                <p>Clean design with colored sidebar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="executive">
+                            <div class="template-preview executive-preview">
+                                <div class="template-header"></div>
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                </div>
+                            </div>
+                            <div class="template-info">
+                                <h3>Executive</h3>
+                                <p>Professional corporate style</p>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="creative">
+                            <div class="template-preview creative-preview">
+                                <div class="template-accent"></div>
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                </div>
+                            </div>
+                            <div class="template-info">
+                                <h3>Creative Bold</h3>
+                                <p>Colorful and eye-catching</p>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="minimal">
+                            <div class="template-preview minimal-preview">
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                </div>
+                            </div>
+                            <div class="template-info">
+                                <h3>Minimal Clean</h3>
+                                <p>Simple and elegant</p>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="professional">
+                            <div class="template-preview professional-preview">
+                                <div class="template-header-line"></div>
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                </div>
+                            </div>
+                            <div class="template-info">
+                                <h3>Professional</h3>
+                                <p>Classic business format</p>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="elegant">
+                            <div class="template-preview elegant-preview">
+                                <div class="template-border"></div>
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                </div>
+                            </div>
+                            <div class="template-info">
+                                <h3>Elegant Border</h3>
+                                <p>Sophisticated with gold accents</p>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="tech">
+                            <div class="template-preview tech-preview">
+                                <div class="template-tech-header"></div>
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                </div>
+                            </div>
+                            <div class="template-info">
+                                <h3>Tech Modern</h3>
+                                <p>Perfect for developers & IT professionals</p>
+                            </div>
+                        </div>
+                        
+                        <div class="template-card" data-template="classic">
+                            <div class="template-preview classic-preview">
+                                <div class="template-content">
+                                    <div class="template-line"></div>
+                                    <div class="template-line short"></div>
+                                    <div class="template-line"></div>
+                                </div>
+                            </div>
+                            <div class="template-info">
+                                <h3>Classic Simple</h3>
+                                <p>Traditional black & white format</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="theme-selection">
+                        <h3>Choose Color Theme</h3>
+                        <div class="theme-options">
+                            <div class="theme-color active" data-theme="blue" style="background: #2563eb;"></div>
+                            <div class="theme-color" data-theme="green" style="background: #16a34a;"></div>
+                            <div class="theme-color" data-theme="purple" style="background: #9333ea;"></div>
+                            <div class="theme-color" data-theme="red" style="background: #dc2626;"></div>
+                            <div class="theme-color" data-theme="orange" style="background: #ea580c;"></div>
+                            <div class="theme-color" data-theme="teal" style="background: #0d9488;"></div>
+                        </div>
+                        
+                        <div class="color-intensity">
+                            <h4>Color Intensity</h4>
+                            <div class="intensity-control">
+                                <span class="intensity-label">Light</span>
+                                <input type="range" id="colorIntensity" min="0.3" max="1" step="0.1" value="1" class="intensity-slider">
+                                <span class="intensity-label">Dark</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Personal Information -->
+                <div class="wizard-step" id="step2">
+                    <div class="step-header">
+                        <h2><i class="fas fa-user"></i> Personal Information</h2>
+                        <p>Tell us about yourself</p>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div class="image-upload-section">
+                            <div class="image-preview" id="imagePreview">
+                                <i class="fas fa-camera"></i>
+                                <p>Upload Photo</p>
+                            </div>
+                            <button class="btn btn-outline" onclick="document.getElementById('imageInput').click()">
+                                <i class="fas fa-upload"></i> Choose Photo
+                            </button>
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" id="fullName" placeholder="John Doe" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" id="phone" placeholder="+1 (555) 123-4567" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Location *</label>
+                                <input type="text" id="location" placeholder="New York, NY" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>LinkedIn Profile</label>
+                                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Website/Portfolio</label>
+                                <input type="url" id="website" placeholder="https://yourwebsite.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Job Title/Designation</label>
+                                <input type="text" id="jobTitle" placeholder="Software Developer, Designer, etc.">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Professional Summary -->
+                <div class="wizard-step" id="step3">
+                    <div class="step-header">
+                        <h2><i class="fas fa-file-text"></i> Professional Summary</h2>
+                        <p>Write a brief overview of your career and goals</p>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div class="form-group">
+                            <label>Professional Summary</label>
+                            <textarea id="summary" rows="6" placeholder="Experienced software developer with 5+ years of expertise in building scalable web applications. Passionate about creating innovative solutions and leading development teams to deliver high-quality products."></textarea>
+                            <div class="char-count"><span id="summaryCount">0</span>/500 characters</div>
+                        </div>
+                        
+                        <div class="tips-card">
+                            <h4><i class="fas fa-lightbulb"></i> Writing Tips</h4>
+                            <ul>
+                                <li>Keep it concise (2-3 sentences)</li>
+                                <li>Highlight your key strengths</li>
+                                <li>Mention years of experience</li>
+                                <li>Include your career goals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Work Experience -->
+                <div class="wizard-step" id="step4">
+                    <div class="step-header">
+                        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                        <p>Add your professional work history</p>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div id="experienceList" class="dynamic-list"></div>
+                        
+                        <button class="btn btn-add" id="addExperienceBtn">
+                            <i class="fas fa-plus"></i> Add Work Experience
+                        </button>
+                        
+                        <div class="empty-state" id="experienceEmpty">
+                            <i class="fas fa-briefcase"></i>
+                            <h4>No work experience added yet</h4>
+                            <p>Click "Add Work Experience" to get started</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Education -->
+                <div class="wizard-step" id="step5">
+                    <div class="step-header">
+                        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                        <p>Add your educational background</p>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div id="educationList" class="dynamic-list"></div>
+                        
+                        <button class="btn btn-add" id="addEducationBtn">
+                            <i class="fas fa-plus"></i> Add Education
+                        </button>
+                        
+                        <div class="empty-state" id="educationEmpty">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>No education added yet</h4>
+                            <p>Click "Add Education" to get started</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6: Skills -->
+                <div class="wizard-step" id="step6">
+                    <div class="step-header">
+                        <h2><i class="fas fa-award"></i> Skills & Interests</h2>
+                        <p>Showcase your abilities and interests</p>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div class="skills-section">
+                            <h3>Technical Skills</h3>
+                            <div class="skill-input">
+                                <input type="text" id="skillInput" placeholder="e.g., JavaScript, Python, Project Management">
+                                <button class="btn btn-primary" id="addSkillBtn">Add</button>
+                            </div>
+                            <div class="tags-container" id="skillsTags"></div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h3>Soft Skills</h3>
+                            <div class="skill-input">
+                                <input type="text" id="softSkillInput" placeholder="e.g., Leadership, Communication, Problem Solving">
+                                <button class="btn btn-primary" onclick="addSoftSkill()">Add</button>
+                            </div>
+                            <div class="tags-container" id="softSkillsTags"></div>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h3>Interests & Hobbies</h3>
+                            <div class="skill-input">
+                                <input type="text" id="interestInput" placeholder="e.g., Photography, Travel, Reading">
+                                <button class="btn btn-primary" onclick="addInterest()">Add</button>
+                            </div>
+                            <div class="tags-container" id="interestsTags"></div>
+                        </div>
+                        
+                        <div class="projects-section">
+                            <h3>Projects (Optional)</h3>
+                            <div id="projectsList" class="dynamic-list"></div>
+                            <button class="btn btn-add" id="addProjectBtn">
+                                <i class="fas fa-plus"></i> Add Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7: Finish -->
+                <div class="wizard-step" id="step7">
+                    <div class="step-header">
+                        <h2><i class="fas fa-check-circle"></i> Review & Download</h2>
+                        <p>Your resume is ready! Review and download</p>
+                    </div>
+                    
+                    <div class="form-content">
+                        <div class="completion-card">
+                            <div class="completion-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>Congratulations!</h3>
+                            <p>Your professional resume is complete and ready to download.</p>
+                            
+                            <div class="final-actions">
+                                <button class="btn btn-primary btn-large" id="finalDownloadBtn">
+                                    <i class="fas fa-download"></i> Download Resume
+                                </button>
+                                <button class="btn btn-outline btn-large" id="finalPreviewBtn">
+                                    <i class="fas fa-eye"></i> Preview Resume
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="tips-card">
+                            <h4><i class="fas fa-tips"></i> Next Steps</h4>
+                            <ul>
+                                <li>Save multiple versions for different jobs</li>
+                                <li>Customize your resume for each application</li>
+                                <li>Keep your resume updated regularly</li>
+                                <li>Use action verbs and quantify achievements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="wizard-navigation">
+                    <button class="btn btn-secondary" id="prevBtn" style="display: none;">
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button class="btn btn-primary" id="nextBtn">
+                        Next <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="preview-section">
+                <div class="preview-header">
+                    <h3><i class="fas fa-eye"></i> Live Preview</h3>
+                    <p>See how your resume looks</p>
+                </div>
+                
+                <div class="resume-preview" id="resumePreview">
+                    <!-- Resume content will be generated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #2d3748; color: white; padding: 2rem 0; text-align: center; margin-top: 3rem;">
+        <div class="container">
+            <p style="opacity: 0.8;">&copy; 2025 Mukul Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script-wizard.js"></script>
+</body>
+</html>

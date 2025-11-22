@@ -1,0 +1,20 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "description": "Professional Resume Builder - Pure HTML, CSS, JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "start index.html"
+  },
+  "keywords": [
+    "resume",
+    "builder",
+    "cv",
+    "professional",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Resume Builder",
+  "license": "MIT"
+}
